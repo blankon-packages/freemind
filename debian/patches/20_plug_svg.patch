@@ -1,0 +1,58 @@
+From: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Date: Fri, 4 Oct 2013 13:10:23 +0200
+Subject: 20_plug_svg
+
+===================================================================
+---
+ freemind/plugins/ExportSvg.xml | 33 +++++++++++----------------------
+ 1 file changed, 11 insertions(+), 22 deletions(-)
+
+diff --git a/freemind/plugins/ExportSvg.xml b/freemind/plugins/ExportSvg.xml
+index 54e1c7e..1a1db99 100644
+--- a/freemind/plugins/ExportSvg.xml
++++ b/freemind/plugins/ExportSvg.xml
+@@ -1,27 +1,16 @@
+ <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ <plugin	label="plugins/ExportPdf">
+ 	<plugin_classpath jar="svg/svg_plugin.jar"/>
+-	<plugin_classpath jar="svg/batik-awt-util.jar"/>
+-	<plugin_classpath jar="svg/batik-bridge.jar"/>
+-	<plugin_classpath jar="svg/batik-css.jar"/>
+-	<plugin_classpath jar="svg/batik-dom.jar"/>
+-	<plugin_classpath jar="svg/batik-extension.jar"/>
+-	<plugin_classpath jar="svg/batik-ext.jar"/>
+-	<plugin_classpath jar="svg/batik-gui-util.jar"/>
+-	<plugin_classpath jar="svg/batik-gvt.jar"/>
+-	<plugin_classpath jar="svg/batik-parser.jar"/>
+-	<plugin_classpath jar="svg/batik-script.jar"/>
+-	<plugin_classpath jar="svg/batik-squiggle.jar"/>
+-	<plugin_classpath jar="svg/batik-svg-dom.jar"/>
+-	<plugin_classpath jar="svg/batik-svggen.jar"/>
+-	<plugin_classpath jar="svg/batik-swing.jar"/>
+-	<plugin_classpath jar="svg/batik-transcoder.jar"/>
+-	<plugin_classpath jar="svg/batik-util.jar"/>
+-	<plugin_classpath jar="svg/batik-xml.jar"/>
+-	<plugin_classpath jar="svg/js.jar"/>
+-	<plugin_classpath jar="svg/pdf-transcoder.jar"/>
+-	<plugin_classpath jar="svg/xerces_2_5_0.jar"/>
+-	<plugin_classpath jar="svg/xml-apis.jar"/>
++	<plugin_classpath jar="/usr/share/java/batik-all.jar"/>
++	<plugin_classpath jar="/usr/share/java/js.jar"/>
++	<plugin_classpath jar="/usr/share/java/fop.jar"/>
++	<plugin_classpath jar="/usr/share/java/xercesImpl.jar"/>
++	<plugin_classpath jar="/usr/share/java/xmlParserAPIs.jar"/>
++	<plugin_classpath jar="/usr/share/java/avalon-framework.jar"/>
++	<plugin_classpath jar="/usr/share/java/commons-logging.jar"/>
++	<plugin_classpath jar="/usr/share/java/commons-io.jar"/>
++	<plugin_classpath jar="/usr/share/java/xmlgraphics-commons.jar"/>
++	<plugin_classpath jar="/usr/share/java/xml-apis-ext.jar"/>
+ 	<plugin_action 
+ 		documentation="%plugins/ExportPdf.xml_documentation" 
+ 		name="%plugins/ExportPdf.xml_name" base="freemind.extensions.ModeControllerHookAdapter" 
+@@ -38,4 +27,4 @@
+ 		<plugin_mode class_name="freemind.modes.mindmapmode"/>
+ 		<plugin_menu location="menu_bar/file/export/pdf/svg_export"/>
+ 	</plugin_action>
+-</plugin>
+\ No newline at end of file
++</plugin>

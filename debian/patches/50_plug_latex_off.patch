@@ -1,0 +1,27 @@
+From: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Date: Fri, 4 Oct 2013 13:10:24 +0200
+Subject: 50_plug_latex_off
+
+---
+ freemind/plugins/build.xml | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/freemind/plugins/build.xml b/freemind/plugins/build.xml
+index 477c61e..194f385 100644
+--- a/freemind/plugins/build.xml
++++ b/freemind/plugins/build.xml
+@@ -24,6 +24,7 @@
+ 				    <exclude name="build_jabber.xml"/>
+ 					<!-- This collaboration module is for post 0.9.0. -->
+ 				    <exclude name="build_database.xml"/>
++				    <exclude name="build_latex.xml"/>
+ 				</fileset>
+ 			</subant>
+ 		</sequential>
+@@ -41,4 +42,4 @@
+ 		<callant task="post"/>
+ 	</target>
+ 
+-</project>
+\ No newline at end of file
++</project>

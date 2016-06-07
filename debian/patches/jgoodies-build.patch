@@ -1,0 +1,21 @@
+From: Markus Koschany <apo@gambaru.de>
+Date: Fri, 4 Oct 2013 13:12:46 +0200
+Subject: jgoodies build
+
+---
+ freemind/freemind/preferences/layout/OptionPanel.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/freemind/freemind/preferences/layout/OptionPanel.java b/freemind/freemind/preferences/layout/OptionPanel.java
+index 19a6951..e9a3cfe 100644
+--- a/freemind/freemind/preferences/layout/OptionPanel.java
++++ b/freemind/freemind/preferences/layout/OptionPanel.java
+@@ -400,7 +400,7 @@ public class OptionPanel implements TextTranslator {
+         	JLabel label = new JLabel(labelText, icon, JLabel.RIGHT);
+             label.setToolTipText(pTranslator.getText(getDescription()));
+             if(rowSpec == null){
+-                rowSpec = new RowSpec("fill:20dlu");
++                rowSpec = RowSpec.decode("fill:20dlu");
+             }
+             if( 3 < builder.getColumn()){
+             builder.appendRelatedComponentsGapRow();

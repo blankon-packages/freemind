@@ -1,0 +1,39 @@
+From: Eric Lavarde <deb@zorglub.s.bawue.de>
+Date: Sat, 8 May 2010 16:56:58 +0200
+Subject: fix shell wrapper
+
+---
+ freemind/freemind.sh | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+
+diff --git a/freemind/freemind.sh b/freemind/freemind.sh
+index 5cd29ee..20bb799 100644
+--- a/freemind/freemind.sh
++++ b/freemind/freemind.sh
+@@ -94,7 +94,8 @@ findjava() {
+ 		return 0
+ 	else
+ 		_error "Couldn't find a java virtual machine," \
+-		       "define JAVACMD, JAVA_BINDIR, JAVA_HOME or PATH."
++		       "define JAVACMD, JAVA_BINDIR, JAVA_HOME or PATH." \
++		       "See the manpage of freemind(1) for details."
+ 		return 1
+ 	fi
+ }
+@@ -196,11 +197,12 @@ fi
+ # you want to add a new Look&Feel jar (the motif one is so ugly...).
+ # 
+ CLASSPATH="${ADD_JARS}:${CLASSPATH}:${freedir}/lib/freemind.jar:\
+-${freedir}/lib/jibx/jibx-run.jar:\
+-${freedir}/lib/jibx/xpp3.jar:\
++/usr/share/java/SimplyHTML.jar:\
++/usr/share/java/gnu-regexp.jar:\
++/usr/share/java/jibx-run-1.1.6a.jar:\
++/usr/share/java/xpp3.jar:\
+ ${freedir}/lib/bindings.jar:\
+-${freedir}/lib/commons-lang-2.0.jar:\
+-${freedir}/lib/forms-1.0.5.jar:\
++/usr/share/java/forms.jar:\
+ ${freedir}"
+ if [ "${JAVA_TYPE}" = "sun" ]
+ then

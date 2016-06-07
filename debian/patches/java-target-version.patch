@@ -1,0 +1,27 @@
+From: Markus Koschany <apo@gambaru.de>
+Date: Fri, 4 Oct 2013 13:50:38 +0200
+Subject: java target version
+
+Use java target version 1.5 to make freemind compile with
+jgoodies-forms-java 1.6
+
+
+---
+ freemind/build.xml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/freemind/build.xml b/freemind/build.xml
+index 0b0de1d..ed19e60 100644
+--- a/freemind/build.xml
++++ b/freemind/build.xml
+@@ -30,8 +30,8 @@
+ 	<property name="FM.jar" location="${dist.lib}/freemind.jar"/>
+ 	<property name="post" location="../post" />
+ 	<property name="debug" value="on" />
+-	<property name="java_source_version" value="1.4" />
+-	<property name="java_target_version" value="1.4" />
++	<property name="java_source_version" value="1.5" />
++	<property name="java_target_version" value="1.5" />
+ 	<property name="build.compiler" value="modern" />
+  	<property name="java.dir" value="/usr/share/java" />
+   

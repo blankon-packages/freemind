@@ -1,0 +1,23 @@
+From: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Date: Fri, 4 Oct 2013 13:10:23 +0200
+Subject: 02_build_xml_jibx
+
+---
+ freemind/build.xml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/freemind/build.xml b/freemind/build.xml
+index cc55a9f..0b0de1d 100644
+--- a/freemind/build.xml
++++ b/freemind/build.xml
+@@ -38,8 +38,8 @@
+   	<!-- begin generator part -->
+  	<property name="jibxhome" value="${java.dir}"/>
+ 	<property name="jibxjar" location="lib/bindings.jar"/>
+-	<property name="jibxruntimelibs" value="${jibxhome}/jibx-run.jar:${jibxhome}/xpp3.jar"/>
+-	<property name="jibxlibs" value="${jibxhome}/bcel.jar:${jibxhome}/jibx-bind.jar:${jibxhome}/jibx-extras.jar:${jibxruntimelibs}"/>
++	<property name="jibxruntimelibs" value="${jibxhome}/jibx-run-1.1.6a.jar:${jibxhome}/xpp3.jar"/>
++	<property name="jibxlibs" value="${jibxhome}/bcel.jar:${jibxhome}/jibx-bind-1.1.6a.jar:${jibxhome}/jibx-extras-1.1.6a.jar:${jibxruntimelibs}"/>
+ 	<taskdef name="bind" classname="org.jibx.binding.ant.CompileTask">
+ 		<classpath path="${jibxlibs}"/>
+ 	</taskdef>
